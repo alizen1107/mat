@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riyaziyyat Mövzuları</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #fff;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            margin: 0 auto;
+            background: white;
+            page-break-after: always;
+        }
+
+        h1 {
+            font-family: 'Roboto Slab', serif;
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-bottom: 4px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Roboto Slab', serif;
+            color: #34495e;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            color: #555;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .formula {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+        }
+
+        .example {
+            background: #e8f5e9;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        ul,
+        ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .cover {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 297mm;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cover h1 {
+            font-size: 48px;
+            color: white;
+            border: none;
+            margin-bottom: 30px;
+        }
+
+        .cover p {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        @media print {
+            .page {
+                margin: 0;
+                border: none;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cover Page -->
+    <div class="page cover">
+        <h1>RİYAZİYYAT MÖVZULARİ</h1>
+        <p>Kompleks Ədədlər</p>
+        <p>Diferensial Tənliklər</p>
+        <p>Matris və Determinantlar</p>
+        <p>İki Tərtibli Əyrilər</p>
+        <p>Fəza Həndəsəsi</p>
+    </div>
+
+    <!-- Topic 1: Complex Numbers -->
+    <div class="page">
+        <h1>1. KOMPLEKS ƏDƏDLƏR VƏ ONLAR ÜZƏRİNDƏ ƏMƏLLƏR</h1>
+
+        <h2>1.1. Kompleks Ədədlərin Tərifi</h2>
+
+        <p>Kompleks ədədlər riyaziyyatın ən mühüm anlayışlarından biridir. Tarixi olaraq, kompleks ədədlər XVI əsrdə
+            kubik tənliklərin həllində meydana çıxmışdır. İtalyan riyaziyyatçıları Cardano və Bombelli bu sahədə ilk
+            addımları atmışlar.</p>
+
+        <p>Kompleks ədəd z aşağıdakı formada yazılır:</p>
+
+        <div class="formula">
+            z = a + bi
+        </div>
+
+        <p>Burada:</p>
+        <ul>
+            <li><strong>a</strong> - həqiqi hissə (Re(z) = a)</li>
+            <li><strong>b</strong> - xəyali hissə (Im(z) = b)</li>
+            <li><strong>i</strong> - xəyali vahid (i² = -1)</li>
+        </ul>
+
+        <div class="note">
+            <strong>Qeyd:</strong> Xəyali vahid i ədədi i² = -1 şərtini ödəyir. Bu, həqiqi ədədlər çoxluğunda həll
+            olunmayan x² + 1 = 0 tənliyinin həllidir.
+        </div>
+
+        <h2>1.2. Kompleks Müstəvisi</h2>
+
+        <p>Kompleks ədədləri həndəsi olaraq kompleks müstəvisində (Gauss müstəvisi) təsvir etmək olar. Bu müstəvidə:</p>
+
+        <ul>
+            <li>Üfüqi ox - həqiqi ox (Re)</li>
+            <li>Şaquli ox - xəyali ox (Im)</li>
+            <li>Hər kompleks ədəd z = a + bi müstəvidə (a, b) nöqtəsi kimi təsvir olunur</li>
+        </ul>
+
+        <img src="C:/Users/alioz/.gemini/antigravity/brain/ec78b30b-05f3-43bc-a975-21e351a1fe57/complex_plane_diagram_1764873550608.png"
+            alt="Kompleks müstəvisi">
+
+        <h2>1.3. Kompleks Ədədin Modulü və Arqumenti</h2>
+
+        <p>Kompleks ədədin <strong>modulu</strong> (və ya mütləq qiyməti) onun başlanğıc nöqtəsindən məsafəsidir:</p>
+
+        <div class="formula">
+            |z| = √(a² + b²)
+        </div>
+
+        <p>Kompleks ədədin <strong>arqumenti</strong> (və ya fazası) müsbət həqiqi oxla z vektorunun əmələ gətirdiyi
+            bucaqdır:</p>
+
+        <div class="formula">
+            arg(z) = φ = arctan(b/a)
+        </div>
+
+        <div class="example">
+            <strong>Nümunə 1.1:</strong> z = 3 + 4i kompleks ədədinin modulunu və arqumentini tapaq.<br><br>
+            Həll:<br>
+            |z| = √(3² + 4²) = √(9 + 16) = √25 = 5<br>
+            arg(z) = arctan(4/3) ≈ 53.13°
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>1.4. Kompleks Ədədin Triqqonometrik və Eksponensial Formaları</h2>
+
+        <p>Kompleks ədədi müxtəlif formalarda yazmaq olar:</p>
+
+        <h3>Triqqonometrik forma:</h3>
+        <div class="formula">
+            z = r(cos φ + i sin φ)
+        </div>
+
+        <p>Burada r = |z| - modul, φ = arg(z) - arqumentdir.</p>
+
+        <h3>Eksponensial forma (Eyler düsturu):</h3>
+        <div class="formula">
+            z = re^(iφ)
+        </div>
+
+        <p>Eyler düsturu:</p>
+        <div class="formula">
+            e^(iφ) = cos φ + i sin φ
+        </div>
+
+        <div class="note">
+            <strong>Eyler düsturunun xüsusi halları:</strong><br>
+            e^(iπ) + 1 = 0 (Eyler eynilik)<br>
+            e^(i·π/2) = i<br>
+            e^(i·2π) = 1
+        </div>
+
+        <h2>1.5. Kompleks Ədədlər Üzərində Əməllər</h2>
+
+        <img src="C:/Users/alioz/.gemini/antigravity/brain/ec78b30b-05f3-43bc-a975-21e351a1fe57/complex_operations_icon_1764873567402.png"
+            alt="Kompleks ədədlər üzərində əməllər" style="max-width: 300px;">
+
+        <h3>1.5.1. Toplama və Çıxma</h3>
+
+        <p>İki kompleks ədədin toplanması və çıxılması həqiqi və xəyali hissələrin ayrıca toplanması/çıxılması ilə
+            həyata keçirilir:</p>
+
+        <div class="formula">
+            z₁ + z₂ = (a₁ + a₂) + (b₁ + b₂)i<br>
+            z₁ - z₂ = (a₁ - a₂) + (b₁ - b₂)i
+        </div>
+
+        <div class="example">
+            <strong>Nümunə 1.2:</strong> z₁ = 2 + 3i və z₂ = 1 - 2i ədədlərini toplayaq və çıxaq.<br><br>
+            Həll:<br>
+            z₁ + z₂ = (2 + 1) + (3 - 2)i = 3 + i<br>
+            z₁ - z₂ = (2 - 1) + (3 - (-2))i = 1 + 5i
+        </div>
+
+        <h3>1.5.2. Vurma</h3>
+
+        <p>Alqebraik formada vurma:</p>
+        <div class="formula">
+            z₁ · z₂ = (a₁ + b₁i)(a₂ + b₂i) = (a₁a₂ - b₁b₂) + (a₁b₂ + a₂b₁)i
+        </div>
+
+        <p>Triqqonometrik formada vurma (daha sadə):</p>
+        <div class="formula">
+            z₁ · z₂ = r₁r₂[cos(φ₁ + φ₂) + i sin(φ₁ + φ₂)]
+        </div>
+
+        <div class="note">
+            <strong>Qeyd:</strong> Kompleks ədədləri vurarkən modullar vurulur, arqumentlər isə toplanır.
+        </div>
+
+        <div class="example">
+            <strong>Nümunə 1.3:</strong> z₁ = 1 + i və z₂ = 2 - i ədədlərini vurun.<br><br>
+            Həll:<br>
+            z₁ · z₂ = (1 + i)(2 - i) = 2 - i + 2i - i² = 2 + i - (-1) = 3 + i
+        </div>
+    </div>
+
+    <div class="page">
+        <h3>1.5.3. Bölmə</h3>
+        <p>Kompleks ədədlərin bölünməsi üçün kəsri məxrəcini həqiqi ədədə çevirmək lazımdır. Bunun üçün kəsrin həm
+            surətini, həm də məxrəcini məxrəcin qoşma kompleks ədədinə vururuq:</p>
+
+        <div class="formula">
+            z₁/z₂ = (a₁ + b₁i)/(a₂ + b₂i) = [(a₁ + b₁i)(a₂ - b₂i)]/[(a₂ + b₂i)(a₂ - b₂i)]<br>
+            = [(a₁a₂ + b₁b₂) + (a₂b₁ - a₁b₂)i]/(a₂² + b₂²)
+        </div>
+
+        <p>Triqqonometrik formada bölmə:</p>
+        <div class="formula">
+            z₁/z₂ = (r₁/r₂)[cos(φ₁ - φ₂) + i sin(φ₁ - φ₂)]
+        </div>
+
+        <div class="example">
+            <strong>Nümunə 1.4:</strong> (3 + 4i)/(1 + 2i) bölməsini yerinə yetirək.<br><br>
+            Həll:<br>
+            (3 + 4i)/(1 + 2i) = [(3 + 4i)(1 - 2i)]/[(1 + 2i)(1 - 2i)]<br>
+            = [3 - 6i + 4i - 8i²]/[1 - 4i²]<br>
+            = [3 - 2i + 8]/[1 + 4]<br>
+            = (11 - 2i)/5 = 11/5 - 2i/5 = 2.2 - 0.4i
+        </div>
+
+        <h2>1.6. Qoşma Kompleks Ədəd</h2>
+
+        <p>z = a + bi kompleks ədədinin <strong>qoşma kompleks ədədi</strong> z̄ (və ya z*) aşağıdakı kimi təyin olunur:
+        </p>
+
+        <div class="formula">
+            z̄ = a - bi
+        </div>
+
+        <p>Qoşma kompleks ədədin xassələri:</p>
+        <ul>
+            <li>z + z̄ = 2a = 2Re(z)</li>
+            <li>z - z̄ = 2bi = 2i·Im(z)</li>
+            <li>z · z̄ = a² + b² = |z|²</li>
+            <li>(z̄)̄ = z</li>
+            <li>(z₁ + z₂)̄ = z̄₁ + z̄₂</li>
+            <li>(z₁ · z₂)̄ = z̄₁ · z̄₂</li>
+        </ul>
+
+        <h2>1.7. Kompleks Ədədin Qüvvətə Yüksəldilməsi</h2>
+
+        <p><strong>De Moivre düsturu:</strong></p>
+        <div class="formula">
+            z^n = r^n(cos(nφ) + i sin(nφ)) = r^n · e^(inφ)
+        </div>
+
+        <div class="example">
+            <strong>Nümunə 1.5:</strong> (1 + i)⁴ hesablayaq.<br><br>
+            Həll:<br>
+            Əvvəlcə triqqonometrik formaya keçək:<br>
+            r = √(1² + 1²) = √2<br>
+            φ = arctan(1/1) = π/4<br>
+            z = √2(cos(π/4) + i sin(π/4))<br><br>
+            De Moivre düsturuna görə:<br>
+            z⁴ = (√2)⁴(cos(4·π/4) + i sin(4·π/4))<br>
+            = 4(cos π + i sin π)<br>
+            = 4(-1 + 0i) = -4
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>1.8. Kompleks Ədəddən Kök Çıxarma</h2>
+
+        <p>z kompleks ədədindən n-ci dərəcədən kök çıxarmaq üçün aşağıdakı düsturdan istifadə olunur:</p>
+
+        <div class="formula">
+            ⁿ√z = ⁿ√r[cos((φ + 2πk)/n) + i sin((φ + 2πk)/n)]
+        </div>
+
+        <p>Burada k = 0, 1, 2, ..., n-1 və n fərqli kök alınır.</p>
+
+        <div class="example">
+            <strong>Nümunə 1.6:</strong> 1-dən kubik kök çıxaraq (³√1).<br><br>
+            Həll:<br>
+            1 = 1(cos 0 + i sin 0)<br>
+            r = 1, φ = 0<br><br>
+            k = 0: ³√1 = cos(0/3) + i sin(0/3) = 1<br>
+            k = 1: ³√1 = cos(2π/3) + i sin(2π/3) = -1/2 + i√3/2<br>
+            k = 2: ³√1 = cos(4π/3) + i sin(4π/3) = -1/2 - i√3/2
+        </div>
+
+        <h2>1.9. Kompleks Ədədlərin Tətbiqləri</h2>
+
+        <p>Kompleks ədədlər riyaziyyatın və fizikanın bir çox sahələrində tətbiq olunur:</p>
+
+        <ul>
+            <li><strong>Elektrotexnika:</strong> Dəyişən cərəyan dövrələrinin təhlili</li>
+            <li><strong>Kvant mexanikası:</strong> Dalğa funksiyalarının təsviri</li>
+            <li><strong>Siqnal emalı:</strong> Furye çevrilməsi</li>
+            <li><strong>Aerodinamika:</strong> Maye axınının modelləşdirilməsi</li>
+            <li><strong>Fraktallar:</strong> Mandelbrot çoxluğu</li>
+            <li><strong>Rəqəmsal görüntü emalı:</strong> Filtrləmə və sıxılma</li>
+        </ul>
+
+        <h2>1.10. Kompleks Funksiyalar</h2>
+
+        <p>Kompleks dəyişənli funksiya f: ℂ → ℂ şəklində yazılır. Ən çox istifadə olunan kompleks funksiyalar:</p>
+
+        <h3>Eksponensial funksiya:</h3>
+        <div class="formula">
+            e^z = e^(a+bi) = e^a(cos b + i sin b)
+        </div>
+
+        <h3>Triqqonometrik funksiyalar:</h3>
+        <div class="formula">
+            sin z = (e^(iz) - e^(-iz))/(2i)<br>
+            cos z = (e^(iz) + e^(-iz))/2
+        </div>
+
+        <h3>Loqarifmik funksiya:</h3>
+        <div class="formula">
+            ln z = ln|z| + i·arg(z) + 2πki, k ∈ ℤ
+        </div>
+
+        <div class="note">
+            <strong>Qeyd:</strong> Kompleks loqarifm çoxqiymətli funksiyadır, çünki arqument 2π-yə qədər dəqiqliklə
+            müəyyən olunur.
+        </div>
+    </div>
+
+    <!-- Topic 2: Differential Equations -->
+    <div class="page">
+        <h1>2. BİR TƏRTİBLİ XƏTTİ DİFERENSİAL TƏNLİK. BERNOULLİ TƏNLİYİ</h1>
+
+        <h2>2.1. Diferensial Tənliklərin Tərifi</h2>
+
+        <p>Diferensial tənlik naməlum funksiyanı, onun törəmələrini və müstəqil dəyişəni əlaqələndirən tənlikdir. Bir
+            tərtibli diferensial tənlik ümumi formada belə yazılır:</p>
+
+        <div class="formula">
+            F(x, y, y') = 0
+        </div>
+
+        <img src="C:/Users/alioz/.gemini/antigravity/brain/ec78b30b-05f3-43bc-a975-21e351a1fe57/differential_equation_graph_1764873584719.png"
+            alt="Diferensial tənlik qrafiki">
+
+        <h2>2.2. Bir Tərtibli Xətti Diferensial Tənlik</h2>
+
+        <p>Bir tərtibli xətti diferensial tənlik aşağıdakı formadadır:</p>
+
+        <div class="formula">
+            y' + P(x)y = Q(x)
+        </div>
+
+        <p>Bu tənliyin həlli üçün <strong>inteqrallayıcı vuruq</strong> metodundan istifadə olunur.</p>
+
+        <h3>Həll metodu:</h3>
+        <ol>
+            <li>İnteqrallayıcı vuruq μ(x) = e^(∫P(x)dx) tapırıq</li>
+            <li>Tənliyin hər iki tərəfini μ(x)-ə vururuq</li>
+            <li>Alınan tənliyi inteqrallayırıq</li>
+        </ol>
+
+        <div class="example">
+            <strong>Nümunə 2.1:</strong> y' + 2y = 4x tənliyini həll edək.<br><br>
+            Həll:<br>
+            P(x) = 2, Q(x) = 4x<br>
+            μ(x) = e^(∫2dx) = e^(2x)<br>
+            e^(2x)y' + 2e^(2x)y = 4xe^(2x)<br>
+            (e^(2x)y)' = 4xe^(2x)<br>
+            e^(2x)y = ∫4xe^(2x)dx = 2xe^(2x) - e^(2x) + C<br>
+            y = 2x - 1 + Ce^(-2x)
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>2.3. Bernoulli Tənliyi</h2>
+
+        <p>Bernoulli tənliyi aşağıdakı formadadır:</p>
+
+        <div class="formula">
+            y' + P(x)y = Q(x)y^n
+        </div>
+
+        <p>Burada n ≠ 0 və n ≠ 1. Bu tənlik xətti deyil, lakin xətti tənliyə gətirilə bilər.</p>
+
+        <h3>Həll metodu:</h3>
+        <ol>
+            <li>z = y^(1-n) əvəzləməsi aparırıq</li>
+            <li>z' = (1-n)y^(-n)y' alırıq</li>
+            <li>Xətti tənlik alırıq: z' + (1-n)P(x)z = (1-n)Q(x)</li>
+            <li>Xətti tənlik kimi həll edirik</li>
+        </ol>
+
+        <div class="example">
+            <strong>Nümunə 2.2:</strong> y' + y = xy² tənliyini həll edək.<br><br>
+            Həll:<br>
+            n = 2, z = y^(-1) = 1/y<br>
+            z' = -y^(-2)y'<br>
+            -z' + z = x<br>
+            z' - z = -x<br>
+            μ(x) = e^(-x)<br>
+            Həll: z = -x - 1 + Ce^x<br>
+            y = 1/(-x - 1 + Ce^x)
+        </div>
+
+        <h2>2.4. Dəyişənlərə Ayrılan Tənliklər</h2>
+
+        <p>Dəyişənlərə ayrılan tənlik forması:</p>
+
+        <div class="formula">
+            M(x)dx + N(y)dy = 0
+        </div>
+
+        <p>Həll: ∫M(x)dx + ∫N(y)dy = C</p>
+    </div>
+
+    <!-- Topic 3: Matrices and Determinants -->
+    <div class="page">
+        <h1>3. DETERMİNANTIN XASSƏLƏRİ. TƏRS MATRİS. MATRİSİN RANQI</h1>
+
+        <h2>3.1. Determinant Anlayışı</h2>
+
+        <p>Determinant kvadrat matrisə uyğun ədədi xarakteristikadır. 2×2 matris üçün:</p>
+
+        <div class="formula">
+            det(A) = |a b| = ad - bc<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|c d|
+        </div>
+
+        <img src="C:/Users/alioz/.gemini/antigravity/brain/ec78b30b-05f3-43bc-a975-21e351a1fe57/matrix_determinant_visual_1764873602546.png"
+            alt="Matris və determinant">
+
+        <h2>3.2. Determinantın Xassələri</h2>
+
+        <ol>
+            <li>det(A^T) = det(A)</li>
+            <li>İki sətir (sütun) dəyişdirildikdə determinant işarəsini dəyişir</li>
+            <li>İki eyni sətir (sütun) varsa, det(A) = 0</li>
+            <li>Sətir (sütun) ədədə vurulsa, determinant həmin ədədə vurulur</li>
+            <li>det(AB) = det(A)·det(B)</li>
+            <li>det(A^(-1)) = 1/det(A)</li>
+        </ol>
+
+        <h2>3.3. Tərs Matris</h2>
+
+        <p>A matrisi üçün tərs matris A^(-1) aşağıdakı şərti ödəyir:</p>
+
+        <div class="formula">
+            A·A^(-1) = A^(-1)·A = I
+        </div>
+
+        <p>Tərs matrisin mövcudluq şərti: det(A) ≠ 0</p>
+
+        <h3>2×2 matris üçün tərs matris:</h3>
+
+        <div class="formula">
+            A^(-1) = (1/det(A))·| d -b|<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-c
+            a|
+        </div>
+
+        <div class="example">
+            <strong>Nümunə 3.1:</strong> A = |2 1| matrisinin tərsini tapaq.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|3
+            4|<br><br>
+            Həll:<br>
+            det(A) = 2·4 - 1·3 = 5<br>
+            A^(-1) = (1/5)·| 4 -1| = | 0.8 -0.2|<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-3
+            2|&nbsp;&nbsp;&nbsp;|-0.6 0.4|
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>3.4. Matrisin Ranqı</h2>
+
+        <p>Matrisin ranqı onun xətti asılı olmayan sətir (və ya sütun) sayıdır. Rank(A) ilə işarə olunur.</p>
+
+        <h3>Ranqın xassələri:</h3>
+        <ul>
+            <li>0 ≤ Rank(A) ≤ min(m,n)</li>
+            <li>Rank(A) = Rank(A^T)</li>
+            <li>Rank(AB) ≤ min(Rank(A), Rank(B))</li>
+        </ul>
+
+        <h3>Ranqın hesablanması:</h3>
+        <ol>
+            <li>Qauss metodu ilə pilləli formaya gətirmək</li>
+            <li>Sıfır olmayan sətirlərin sayını saymaq</li>
+        </ol>
+
+        <div class="example">
+            <strong>Nümunə 3.2:</strong> Matrisin ranqını tapaq:<br>
+            A = |1 2 3|<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|2 4 6|<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1 1 1|<br><br>
+            Həll: İkinci sətir birinci sətirin 2 qatıdır.<br>
+            Pilləli forma: |1 2 3|<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0
+            -3 -5|<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|0
+            0 0|<br>
+            Rank(A) = 2
+        </div>
+    </div>
+
+    <!-- Topic 4: Conic Sections -->
+    <div class="page">
+        <h1>4. İKİ TƏRTİBLİ ƏYRİLƏR</h1>
+
+        <h2>4.1. Çevrə</h2>
+
+        <p>Çevrə müstəvidə sabit nöqtədən (mərkəz) eyni məsafədə olan nöqtələr çoxluğudur.</p>
+
+        <div class="formula">
+            (x - a)² + (y - b)² = r²
+        </div>
+
+        <p>Burada (a,b) - mərkəz, r - radius</p>
+
+        <img src="C:/Users/alioz/.gemini/antigravity/brain/ec78b30b-05f3-43bc-a975-21e351a1fe57/conic_sections_diagram_1764873631348.png"
+            alt="İki tərtibli əyrilər">
+
+        <h2>4.2. Ellips</h2>
+
+        <p>Ellips müstəvidə iki sabit nöqtədən (fokus) məsafələrinin cəmi sabit olan nöqtələr çoxluğudur.</p>
+
+        <div class="formula">
+            x²/a² + y²/b² = 1
+        </div>
+
+        <p>Burada:</p>
+        <ul>
+            <li>a - böyük yarımox</li>
+            <li>b - kiçik yarımox</li>
+            <li>c = √(a² - b²) - fokus məsafəsi</li>
+            <li>e = c/a - ekssentrikllik (0 < e < 1)</li>
+        </ul>
+
+        <div class="example">
+            <strong>Nümunə 4.1:</strong> x²/25 + y²/16 = 1 ellipsinin parametrlərini tapaq.<br><br>
+            Həll:<br>
+            a² = 25, a = 5<br>
+            b² = 16, b = 4<br>
+            c = √(25-16) = 3<br>
+            Fokuslar: F₁(-3,0), F₂(3,0)<br>
+            e = 3/5 = 0.6
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>4.3. Hiperbola</h2>
+
+        <p>Hiperbola müstəvidə iki sabit nöqtədən (fokus) məsafələrinin fərqi sabit olan nöqtələr çoxluğudur.</p>
+
+        <div class="formula">
+            x²/a² - y²/b² = 1
+        </div>
+
+        <p>Burada:</p>
+        <ul>
+            <li>a - həqiqi yarımox</li>
+            <li>b - xəyali yarımox</li>
+            <li>c = √(a² + b²) - fokus məsafəsi</li>
+            <li>e = c/a - ekssentrikllik (e > 1)</li>
+        </ul>
+
+        <h3>Asimptotlar:</h3>
+        <div class="formula">
+            y = ±(b/a)x
+        </div>
+
+        <h2>4.4. Parabola</h2>
+
+        <p>Parabola müstəvidə sabit nöqtədən (fokus) və sabit düz xəttdən (direktrisa) eyni məsafədə olan nöqtələr
+            çoxluğudur.</p>
+
+        <div class="formula">
+            y² = 2px
+        </div>
+
+        <p>Burada:</p>
+        <ul>
+            <li>p - parametr</li>
+            <li>Fokus: F(p/2, 0)</li>
+            <li>Direktrisa: x = -p/2</li>
+        </ul>
+
+        <div class="example">
+            <strong>Nümunə 4.2:</strong> y² = 8x parabolasının fokusunu və direktrisasını tapaq.<br><br>
+            Həll:<br>
+            2p = 8, p = 4<br>
+            Fokus: F(2, 0)<br>
+            Direktrisa: x = -2
+        </div>
+    </div>
+
+    <!-- Topic 5: Spatial Geometry -->
+    <div class="page">
+        <h1>5. FƏZADA MÜSTƏVİ VƏ DÜZ XƏTT TƏNLİKLƏRİ</h1>
+
+        <h2>5.1. Fəzada Müstəvi Tənliyi</h2>
+
+        <p>Fəzada müstəvi ümumi tənliyi:</p>
+
+        <div class="formula">
+            Ax + By + Cz + D = 0
+        </div>
+
+        <p>Burada n = (A, B, C) müstəvinin normal vektorudur.</p>
+
+        <img src="C:/Users/alioz/.gemini/antigravity/brain/ec78b30b-05f3-43bc-a975-21e351a1fe57/spatial_geometry_3d_1764873650738.png"
+            alt="Fəza həndəsəsi">
+
+        <h3>Müstəvi tənliyinin xüsusi halları:</h3>
+        <ul>
+            <li>D = 0: müstəvi başlanğıcdan keçir</li>
+            <li>A = 0: müstəvi Ox oxuna paraleldir</li>
+            <li>B = 0: müstəvi Oy oxuna paraleldir</li>
+            <li>C = 0: müstəvi Oz oxuna paraleldir</li>
+        </ul>
+
+        <h2>5.2. Nöqtədən Keçən Müstəvi</h2>
+
+        <p>M₀(x₀, y₀, z₀) nöqtəsindən keçən və n = (A, B, C) normal vektorlu müstəvi:</p>
+
+        <div class="formula">
+            A(x - x₀) + B(y - y₀) + C(z - z₀) = 0
+        </div>
+
+        <div class="example">
+            <strong>Nümunə 5.1:</strong> M(1, 2, 3) nöqtəsindən keçən və n = (2, -1, 3) normal vektorlu müstəvi
+            tənliyini yazaq.<br><br>
+            Həll:<br>
+            2(x - 1) - 1(y - 2) + 3(z - 3) = 0<br>
+            2x - 2 - y + 2 + 3z - 9 = 0<br>
+            2x - y + 3z - 9 = 0
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>5.3. Fəzada Düz Xətt Tənliyi</h2>
+
+        <p>Fəzada düz xətt iki müstəvinin kəsişməsi kimi verilir:</p>
+
+        <div class="formula">
+            {A₁x + B₁y + C₁z + D₁ = 0<br>
+            {A₂x + B₂y + C₂z + D₂ = 0
+        </div>
+
+        <h3>Parametrik forma:</h3>
+        <div class="formula">
+            x = x₀ + at<br>
+            y = y₀ + bt<br>
+            z = z₀ + ct
+        </div>
+
+        <p>Burada M₀(x₀, y₀, z₀) - düz xətt üzərində nöqtə, s = (a, b, c) - istiqamət vektoru.</p>
+
+        <h3>Kanonik forma:</h3>
+        <div class="formula">
+            (x - x₀)/a = (y - y₀)/b = (z - z₀)/c
+        </div>
+
+        <div class="example">
+            <strong>Nümunə 5.2:</strong> M(1, -1, 2) nöqtəsindən keçən və s = (2, 3, -1) istiqamət vektorlu düz xətt
+            tənliyini yazaq.<br><br>
+            Həll:<br>
+            Kanonik forma: (x-1)/2 = (y+1)/3 = (z-2)/(-1)<br>
+            Parametrik forma:<br>
+            x = 1 + 2t<br>
+            y = -1 + 3t<br>
+            z = 2 - t
+        </div>
+
+        <h2>5.4. Düz Xətt və Müstəvi Arasında Bucaq</h2>
+
+        <p>Düz xətt istiqamət vektoru s = (a, b, c) və müstəvi normal vektoru n = (A, B, C) arasında bucaq:</p>
+
+        <div class="formula">
+            sin φ = |aA + bB + cC| / (√(a²+b²+c²) · √(A²+B²+C²))
+        </div>
+
+        <h2>5.5. İki Müstəvi Arasında Bucaq</h2>
+
+        <p>Normal vektorları n₁ = (A₁, B₁, C₁) və n₂ = (A₂, B₂, C₂) olan iki müstəvi arasında bucaq:</p>
+
+        <div class="formula">
+            cos φ = |A₁A₂ + B₁B₂ + C₁C₂| / (√(A₁²+B₁²+C₁²) · √(A₂²+B₂²+C₂²))
+        </div>
+    </div>
+
+
+<!-- ƏLAVƏ MƏZMUN: Hər mövzu üçün əlavə səhifələr -->
+
+<!-- Topic 1 Əlavələri -->
+<div class="page">
+    <h2>1.13. Kompleks Ədədlərin Həndəsi Tətbiqləri</h2>
+    
+    <p>Kompleks ədədlər həndəsi çevrilmələri təsvir etmək üçün güclü vasitədir. Kompleks müstəvisində hər bir kompleks ədəd z bir nöqtəni və ya vektoru təmsil edir.</p>
+    
+    <h3>Paralel Köçürmə (Translasiya):</h3>
+    <div class="formula">
+        w = z + z₀
+    </div>
+    <p>Bu çevrilmə z nöqtəsini z₀ vektoru qədər köçürür.</p>
+    
+    <h3>Fırlatma (Rotasiya):</h3>
+    <div class="formula">
+        w = z · e^(iθ)
+    </div>
+    <p>Bu çevrilmə z nöqtəsini başlanğıc ətrafında θ bucağı qədər fırladır.</p>
+    
+    <h3>Miqyaslama (Skalyarlama):</h3>
+    <div class="formula">
+        w = k · z (k > 0)
+    </div>
+    <p>Bu çevrilmə z nöqtəsini başlanğıcdan k dəfə uzaqlaşdırır və ya yaxınlaşdırır.</p>
+    
+    <div class="example">
+        <strong>Nümunə:</strong> z = 1 + i nöqtəsini 45° fırladın və 2 dəfə böyüdün.<br><br>
+        <strong>Həll:</strong><br>
+        Fırlatma: w₁ = (1 + i) · e^(i·π/4) = (1 + i) · (cos 45° + i sin 45°)<br>
+        = (1 + i)(√2/2 + i√2/2) = √2i<br>
+        Miqyaslama: w = 2 · √2i = 2√2i
+    </div>
+    
+    <h2>1.14. Kompleks Ədədlərdə Bərabərsizliklər</h2>
+    
+    <h3>Üçbucaq Bərabərsizliyi:</h3>
+    <div class="formula">
+        |z₁ + z₂| ≤ |z₁| + |z₂|
+    </div>
+    
+    <h3>Tərs Üçbucaq Bərabərsizliyi:</h3>
+    <div class="formula">
+        ||z₁| - |z₂|| ≤ |z₁ - z₂|
+    </div>
+    
+    <h3>Koshi-Şvarts Bərabərsizliyi:</h3>
+    <div class="formula">
+        |z₁z̄₂ + z₂z̄₁| ≤ 2|z₁||z₂|
+    </div>
+    
+    <h2>1.15. Kompleks Ədədlərin Tarixi və İnkişafı</h2>
+    
+    <p>Kompleks ədədlərin inkişafı riyaziyyat tarixində maraqlı bir səhifədir:</p>
+    
+    <ul>
+        <li><strong>XVI əsr:</strong> İtalyan riyaziyyatçıları Cardano və Tartaglia kubik tənliklərin həllində mənfi ədədlərin kökü ilə qarşılaşdılar</li>
+        <li><strong>1572:</strong> Rafael Bombelli kompleks ədədlər üzərində əməllərin qaydalarını sistemləşdirdi</li>
+        <li><strong>1777:</strong> Leonhard Euler i simvolunu təqdim etdi</li>
+        <li><strong>1799:</strong> Carl Friedrich Gauss Cəbrin Əsas Teoremini isbat etdi</li>
+        <li><strong>1806:</strong> Jean-Robert Argand kompleks müstəvisinin həndəsi təsvirini verdi</li>
+        <li><strong>1831:</strong> Gauss "kompleks ədəd" terminini təklif etdi</li>
+    </ul>
+    
+    <h2>1.16. Nəticə və Xülasə</h2>
+    
+    <p>Kompleks ədədlər riyaziyyatın ən fundamental və gözəl nəzəriyyələrindən biridir. Onlar təkcə riyazi maraq doğurmur, həm də fizika, mühəndislik, elektrotexnika, kvant mexanikası və bir çox digər sahələrdə praktik tətbiqlərə malikdir.</p>
+    
+    <p>Kompleks ədədlər nəzəriyyəsinin əsas nailiyyətləri:</p>
+    <ul>
+        <li>Həqiqi ədədlər sisteminin təbii genişlənməsi</li>
+        <li>Bütün polinom tənliklərin həlli</li>
+        <li>Triqqonometrik və eksponensial funksiyaların birləşdirilməsi</li>
+        <li>Həndəsi çevrilmələrin sadə təsviri</li>
+        <li>Fiziki proseslərin modelləşdirilməsi</li>
+    </ul>
+</div>
+
+<!-- Topic 2 Əlavələri -->
+<div class="page">
+    <h2>2.5. Homojen Diferensial Tənliklər</h2>
+    
+    <p>Homojen diferensial tənlik aşağıdakı formada olan tənlikdir:</p>
+    
+    <div class="formula">
+        dy/dx = f(y/x)
+    </div>
+    
+    <h3>Həll metodu:</h3>
+    <ol>
+        <li>v = y/x əvəzləməsi aparırıq, buradan y = vx</li>
+        <li>dy/dx = v + x(dv/dx) alırıq</li>
+        <li>Dəyişənlərə ayrılan tənlik alırıq</li>
+    </ol>
+    
+    <div class="example">
+        <strong>Nümunə 2.3:</strong> (x² + y²)dx - 2xy dy = 0 tənliyini həll edin.<br><br>
+        <strong>Həll:</strong><br>
+        dy/dx = (x² + y²)/(2xy)<br>
+        v = y/x əvəzləməsi: y = vx, dy/dx = v + x(dv/dx)<br>
+        v + x(dv/dx) = (x² + v²x²)/(2vx²) = (1 + v²)/(2v)<br>
+        x(dv/dx) = (1 + v²)/(2v) - v = (1 - v²)/(2v)<br>
+        2v dv/(1 - v²) = dx/x<br>
+        -ln|1 - v²| = ln|x| + C<br>
+        1 - v² = C₁/x<br>
+        1 - y²/x² = C₁/x<br>
+        x² - y² = C₁x
+    </div>
+    
+    <h2>2.6. Tam Diferensial Tənliklər</h2>
+    
+    <p>M(x,y)dx + N(x,y)dy = 0 tənliyi tam diferensial tənlik adlanır, əgər:</p>
+    
+    <div class="formula">
+        ∂M/∂y = ∂N/∂x
+    </div>
+    
+    <p>Bu halda tənliyin həlli:</p>
+    <div class="formula">
+        U(x,y) = C<br>
+        burada ∂U/∂x = M və ∂U/∂y = N
+    </div>
+    
+    <h2>2.7. İnteqrallayıcı Vuruq Metodu</h2>
+    
+    <p>Bəzi hallarda tam olmayan diferensial tənliyi μ(x,y) funksiyasına vuraraq tam tənliyə gətirmək olar. Bu funksiya <strong>inteqrallayıcı vuruq</strong> adlanır.</p>
+    
+    <h3>Xüsusi hallar:</h3>
+    <ul>
+        <li>Əgər (1/N)(∂M/∂y - ∂N/∂x) = f(x) olarsa, μ = e^(∫f(x)dx)</li>
+        <li>Əgər (1/M)(∂N/∂x - ∂M/∂y) = g(y) olarsa, μ = e^(∫g(y)dy)</li>
+    </ul>
+    
+    <h2>2.8. Riccati Tənliyi</h2>
+    
+    <p>Riccati tənliyi aşağıdakı formadadır:</p>
+    
+    <div class="formula">
+        y' = P(x)y² + Q(x)y + R(x)
+    </div>
+    
+    <p>Bu tənliyin ümumi həlli yoxdur, lakin bir xüsusi həll məlum olarsa, ümumi həll tapıla bilər.</p>
+    
+    <h2>2.9. Diferensial Tənliklərin Tətbiqləri</h2>
+    
+    <h3>1. Fizikada:</h3>
+    <ul>
+        <li>Mexaniki hərəkət tənlikləri</li>
+        <li>Elektrik dövrələri</li>
+        <li>İstilik keçiriciliyi</li>
+        <li>Dalğa yayılması</li>
+    </ul>
+    
+    <h3>2. Biologiyada:</h3>
+    <ul>
+        <li>Populyasiya dinamikası</li>
+        <li>Epidemiya modelləri</li>
+        <li>Fermentativ reaksiyalar</li>
+    </ul>
+    
+    <h3>3. İqtisadiyyatda:</h3>
+    <ul>
+        <li>İqtisadi artım modelləri</li>
+        <li>Bazar tarazlığı</li>
+        <li>İnvestisiya strategiyaları</li>
+    </ul>
+    
+    <div class="example">
+        <strong>Praktik Tətbiq - Radioaktiv Parçalanma:</strong><br><br>
+        Radioaktiv maddənin parçalanma sürəti onun miqdarı ilə mütənasibdir:<br>
+        dN/dt = -λN<br><br>
+        Həll: N(t) = N₀e^(-λt)<br><br>
+        Burada N₀ - başlanğıc miqdar, λ - parçalanma sabiti, t - vaxt.
+    </div>
+</div>
+
+<div class="page">
+    <h2>2.10. Xətti Diferensial Tənliklərin Sistemi</h2>
+    
+    <p>İki naməlum funksiyalı xətti sistem:</p>
+    
+    <div class="formula">
+        dx/dt = a₁₁x + a₁₂y + f₁(t)<br>
+        dy/dt = a₂₁x + a₂₂y + f₂(t)
+    </div>
+    
+    <h3>Homojen Sistemin Həlli:</h3>
+    <p>f₁(t) = f₂(t) = 0 olduqda, həll e^(λt) formasında axtarılır.</p>
+    
+    <h2>2.11. Laplace Çevrilməsi ilə Həll</h2>
+    
+    <p>Laplace çevrilməsi diferensial tənlikləri cəbri tənliklərə çevirir:</p>
+    
+    <div class="formula">
+        L{f(t)} = F(s) = ∫₀^∞ e^(-st)f(t)dt
+    </div>
+    
+    <h3>Əsas Xassələr:</h3>
+    <ul>
+        <li>L{f'(t)} = sF(s) - f(0)</li>
+        <li>L{f''(t)} = s²F(s) - sf(0) - f'(0)</li>
+        <li>L{e^(at)f(t)} = F(s-a)</li>
+    </ul>
+    
+    <h2>2.12. Nəticə</h2>
+    
+    <p>Diferensial tənliklər təbiət qanunlarını riyazi dildə ifadə etməyə imkan verir. Onlar fizika, kimya, biologiya, iqtisadiyyat və mühəndisliyin əsasını təşkil edir. Bir tərtibli diferensial tənliklərin həll metodlarını öyrənmək daha mürəkkəb tənlikləri anlamaq üçün zəruridir.</p>
+</div>
+
+<!-- Topic 3 Əlavələri -->
+<div class="page">
+    <h2>3.5. Xətti Tənliklər Sistemi</h2>
+    
+    <p>n naməlumlu n xətti tənlik sistemi:</p>
+    
+    <div class="formula">
+        a₁₁x₁ + a₁₂x₂ + ... + a₁ₙxₙ = b₁<br>
+        a₂₁x₁ + a₂₂x₂ + ... + a₂ₙxₙ = b₂<br>
+        ...<br>
+        aₙ₁x₁ + aₙ₂x₂ + ... + aₙₙxₙ = bₙ
+    </div>
+    
+    <p>Matris formasında: AX = B</p>
+    
+    <h3>Kramer Metodu:</h3>
+    <p>Əgər det(A) ≠ 0 olarsa:</p>
+    
+    <div class="formula">
+        xᵢ = det(Aᵢ) / det(A)
+    </div>
+    
+    <p>Burada Aᵢ - A matrisinin i-ci sütununu B sütunu ilə əvəz etməklə alınan matrisdir.</p>
+    
+    <div class="example">
+        <strong>Nümunə 3.3:</strong> Kramer metodu ilə həll edin:<br>
+        2x + y = 5<br>
+        x - y = 1<br><br>
+        <strong>Həll:</strong><br>
+        A = |2  1|, det(A) = -2 - 1 = -3<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;|1 -1|<br><br>
+        A₁ = |5  1|, det(A₁) = -5 - 1 = -6<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1 -1|<br><br>
+        A₂ = |2  5|, det(A₂) = 2 - 5 = -3<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1  1|<br><br>
+        x = -6/(-3) = 2<br>
+        y = -3/(-3) = 1
+    </div>
+    
+    <h2>3.6. Qauss Metodu</h2>
+    <p>Genişləndirilmiş matrisi pilləli formaya gətirməklə həll tapılır:</p>
+    
+    <ol>
+        <li>Genişləndirilmiş matris [A|B] yaradılır</li>
+        <li>Elementar sətir əməlləri ilə pilləli forma alınır</li>
+        <li>Geriyə əvəzetmə ilə həll tapılır</li>
+    </ol>
+    
+    <h2>3.7. Matris Tənlikləri</h2>
+    
+    <p>AX = B matris tənliyinin həlli (det(A) ≠ 0 olduqda):</p>
+    
+    <div class="formula">
+        X = A⁻¹B
+    </div>
+    
+    <h2>3.8. Xarakteristik Tənlik və Xüsusi Qiymətlər</h2>
+    
+    <p>A matrisinin <strong>xüsusi qiymətləri</strong> λ aşağıdakı tənliyin köklərdir:</p>
+    
+    <div class="formula">
+        det(A - λI) = 0
+    </div>
+    
+    <p>Bu tənlik <strong>xarakteristik tənlik</strong> adlanır.</p>
+    
+    <div class="example">
+        <strong>Nümunə 3.4:</strong> A = |3  1| matrisinin xüsusi qiymətlərini tapın.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|1  3|<br><br>
+        <strong>Həll:</strong><br>
+        det(A - λI) = |3-λ   1  | = (3-λ)² - 1 = 0<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 1   3-λ|<br>
+        9 - 6λ + λ² - 1 = 0<br>
+        λ² - 6λ + 8 = 0<br>
+        (λ - 4)(λ - 2) = 0<br>
+        λ₁ = 4, λ₂ = 2
+    </div>
+    
+    <h2>3.9. Matrislərin Diaqonallaşdırılması</h2>
+    
+    <p>A matrisi diaqonallaşdırıla bilər, əgər n xətti asılı olmayan xüsusi vektoru varsa:</p>
+    
+    <div class="formula">
+        A = PDP⁻¹
+    </div>
+    
+    <p>Burada D - diaqonal matris (xüsusi qiymətlərlə), P - xüsusi vektorlardan ibarət matris.</p>
+</div>
+
+<div class="page">
+    <h2>3.10. Matrislərin Tətbiqləri</h2>
+    
+    <h3>1. Kompüter Qrafikası:</h3>
+    <ul>
+        <li>2D və 3D çevrilmələr</li>
+        <li>Fırlatma, miqyaslama, əyilmə</li>
+        <li>Proyeksiya matrisləri</li>
+    </ul>
+    
+    <h3>2. Kriptoqrafiya:</h3>
+    <ul>
+        <li>Hill şifrələməsi</li>
+        <li>Açıq açar kriptoqrafiyası</li>
+    </ul>
+    
+    <h3>3. İqtisadiyyat:</h3>
+    <ul>
+        <li>Leontief input-output modeli</li>
+        <li>Markov zəncirləri</li>
+        <li>Portfel optimizasiyası</li>
+    </ul>
+    
+    <h3>4. Fizika:</h3>
+    <ul>
+        <li>Kvant mexanikası operatorları</li>
+        <li>Gərginlik və deformasiya tensorları</li>
+        <li>Fırlanma matrisləri</li>
+    </ul>
+    
+    <div class="example">
+        <strong>Praktik Tətbiq - 2D Fırlatma:</strong><br><br>
+        Nöqtəni (x, y) başlanğıc ətrafında θ bucağı qədər fırlatmaq üçün:<br><br>
+        |x'| = |cos θ  -sin θ| |x|<br>
+        |y'| &nbsp; |sin θ   cos θ| |y|<br><br>
+        Məsələn, (1, 0) nöqtəsini 90° fırlatmaq:<br>
+        |x'| = |0  -1| |1| = | 0|<br>
+        |y'| &nbsp; |1   0| |0| &nbsp; | 1|<br><br>
+        Nəticə: (0, 1)
+    </div>
+    
+    <h2>3.11. Nəticə</h2>
+    
+    <p>Matris və determinant nəzəriyyəsi xətti cəbrin əsasını təşkil edir. Bu nəzəriyyə təkcə riyaziyyatda deyil, həm də fizika, mühəndislik, kompüter elmləri, iqtisadiyyat və bir çox digər sahələrdə geniş tətbiq olunur.</p>
+</div>
+
+<!-- Topic 4 Əlavələri -->
+<div class="page">
+    <h2>4.5. Əyrilərin Ümumi Tənliyi</h2>
+    
+    <p>İki tərtibli əyrinin ümumi tənliyi:</p>
+    
+    <div class="formula">
+        Ax² + Bxy + Cy² + Dx + Ey + F = 0
+    </div>
+    
+    <p>Əyrinin növü diskriminantla müəyyən olunur:</p>
+    <ul>
+        <li>B² - 4AC < 0: Ellips (və ya çevrə)</li>
+        <li>B² - 4AC = 0: Parabola</li>
+        <li>B² - 4AC > 0: Hiperbola</li>
+    </ul>
+    
+    <h2>4.6. Çevrənin Ətraflı Xassələri</h2>
+    
+    <h3>Çevrənin Tənlik Formaları:</h3>
+    
+    <div class="formula">
+        Standart forma: (x - a)² + (y - b)² = r²<br>
+        Ümumi forma: x² + y² + Dx + Ey + F = 0
+    </div>
+    
+    <h3>Çevrənin Parametrik Tənliyi:</h3>
+    <div class="formula">
+        x = a + r cos t<br>
+        y = b + r sin t<br>
+        0 ≤ t ≤ 2π
+    </div>
+    
+    <h3>Çevrə ilə Düz Xəttin Qarşılıqlı Vəziyyəti:</h3>
+    <ul>
+        <li>d < r: İki kəsişmə nöqtəsi</li>
+        <li>d = r: Toxunma (bir nöqtə)</li>
+        <li>d > r: Kəsişmə yoxdur</li>
+    </ul>
+    
+    <p>Burada d - mərkəzdən düz xəttə qədər məsafə.</p>
+    
+    <div class="example">
+        <strong>Nümunə 4.3:</strong> x² + y² - 4x + 6y - 3 = 0 çevrəsinin mərkəzini və radiusunu tapın.<br><br>
+        <strong>Həll:</strong><br>
+        Tam kvadrata gətirək:<br>
+        (x² - 4x + 4) + (y² + 6y + 9) = 3 + 4 + 9<br>
+        (x - 2)² + (y + 3)² = 16<br><br>
+        Mərkəz: (2, -3)<br>
+        Radius: r = 4
+    </div>
+    
+    <h2>4.7. Ellipsin Ətraflı Xassələri</h2>
+    
+    <h3>Ellipsin Parametrik Tənliyi:</h3>
+    <div class="formula">
+        x = a cos t<br>
+        y = b sin t<br>
+        0 ≤ t ≤ 2π
+    </div>
+    
+    <h3>Ellipsin Əsas Elementləri:</h3>
+    <ul>
+        <li><strong>Fokuslar:</strong> F₁(-c, 0), F₂(c, 0), c = √(a² - b²)</li>
+        <li><strong>Böyük ox:</strong> 2a</li>
+        <li><strong>Kiçik ox:</strong> 2b</li>
+        <li><strong>Ekssentrikllik:</strong> e = c/a, 0 < e < 1</li>
+        <li><strong>Direktrisalar:</strong> x = ±a/e</li>
+    </ul>
+    
+    <h3>Ellipsin Fokal Xassəsi:</h3>
+    <p>Ellips üzərindəki istənilən M nöqtəsi üçün:</p>
+    <div class="formula">
+        MF₁ + MF₂ = 2a
+    </div>
+    
+    <div class="example">
+        <strong>Nümunə 4.4:</strong> 9x² + 16y² = 144 ellipsinin bütün parametrlərini tapın.<br><br>
+        <strong>Həll:</strong><br>
+        Standart formaya gətirək: x²/16 + y²/9 = 1<br>
+        a² = 16, a = 4<br>
+        b² = 9, b = 3<br>
+        c = √(16 - 9) = √7<br>
+        e = √7/4 ≈ 0.66<br>
+        Fokuslar: F₁(-√7, 0), F₂(√7, 0)<br>
+        Direktrisalar: x = ±16/√7
+    </div>
+</div>
+
+<div class="page">
+    <h2>4.8. Hiperbolanın Ətraflı Xassələri</h2>
+    
+    <h3>Hiperbolanın Parametrik Tənliyi:</h3>
+    <div class="formula">
+        x = a sec t = a/cos t<br>
+        y = b tan t
+    </div>
+    
+    <h3>Hiperbolanın Əsas Elementləri:</h3>
+    <ul>
+        <li><strong>Fokuslar:</strong> F₁(-c, 0), F₂(c, 0), c = √(a² + b²)</li>
+        <li><strong>Həqiqi ox:</strong> 2a</li>
+        <li><strong>Xəyali ox:</strong> 2b</li>
+        <li><strong>Ekssentrikllik:</strong> e = c/a, e > 1</li>
+        <li><strong>Asimptotlar:</strong> y = ±(b/a)x</li>
+    </ul>
+    
+    <h3>Hiperbolanın Fokal Xassəsi:</h3>
+    <p>Hiperbola üzərindəki istənilən M nöqtəsi üçün:</p>
+    <div class="formula">
+        |MF₁ - MF₂| = 2a
+    </div>
+    
+    <h2>4.9. Parabolanın Ətraflı Xassələri</h2>
+    
+    <h3>Parabolanın Müxtəlif Formaları:</h3>
+    
+    <table>
+        <tr>
+            <th>Tənlik</th>
+            <th>Fokus</th>
+            <th>Direktrisa</th>
+        </tr>
+        <tr>
+            <td>y² = 2px</td>
+            <td>F(p/2, 0)</td>
+            <td>x = -p/2</td>
+        </tr>
+        <tr>
+            <td>y² = -2px</td>
+            <td>F(-p/2, 0)</td>
+            <td>x = p/2</td>
+        </tr>
+        <tr>
+            <td>x² = 2py</td>
+            <td>F(0, p/2)</td>
+            <td>y = -p/2</td>
+        </tr>
+        <tr>
+            <td>x² = -2py</td>
+            <td>F(0, -p/2)</td>
+            <td>y = p/2</td>
+        </tr>
+    </table>
+    
+    <h3>Parabolanın Fokal Xassəsi:</h3>
+    <p>Parabola üzərindəki istənilən M nöqtəsi üçün fokusdan və direktrisadan məsafələr bərabərdir.</p>
+    
+    <h2>4.10. Əyrilərin Tətbiqləri</h2>
+    
+    <h3>1. Astronomiya:</h3>
+    <ul>
+        <li>Planetlərin orbitləri - ellips</li>
+        <li>Kometlərin yolları - parabola və ya hiperbola</li>
+    </ul>
+    
+    <h3>2. Mühəndislik:</h3>
+    <ul>
+        <li>Körpü qövsləri - parabola</li>
+        <li>Reflektor antennalar - parabola</li>
+        <li>Soyuducu qüllələr - hiperbola</li>
+    </ul>
+    
+    <h3>3. Optika:</h3>
+    <ul>
+        <li>Teleskop güzgüləri - parabola</li>
+        <li>Elliptik güzgülər - ellips</li>
+    </ul>
+    
+    <div class="example">
+        <strong>Praktik Tətbiq - Peyk Antenası:</strong><br><br>
+        Parabolik antennalar siqnalları fokusda cəmləyir. Əgər antena y² = 8x parabolası formasındadırsa, qəbuledici fokusda yerləşməlidir.<br><br>
+        2p = 8, p = 4<br>
+        Fokus: F(2, 0)<br><br>
+        Qəbuledici (2, 0) nöqtəsində yerləşdirilməlidir.
+    </div>
+    
+    <h2>4.11. Nəticə</h2>
+    
+    <p>İki tərtibli əyrilər həndəsənin ən gözəl və praktik əhəmiyyətli obyektlərindəndir. Onlar təbiətdə və texnikada geniş yayılmışdır və bir çox mühəndislik məsələlərinin həllində istifadə olunur.</p>
+</div>
+
+<!-- Topic 5 Əlavələri -->
+<div class="page">
+    <h2>5.6. Nöqtədən Müstəviyə Qədər Məsafə</h2>
+    
+    <p>M₀(x₀, y₀, z₀) nöqtəsindən Ax + By + Cz + D = 0 müstəvisinə qədər məsafə:</p>
+    
+    <div class="formula">
+        d = |Ax₀ + By₀ + Cz₀ + D| / √(A² + B² + C²)
+    </div>
+    
+    <div class="example">
+        <strong>Nümunə 5.3:</strong> M(1, 2, 3) nöqtəsindən 2x - y + 2z - 3 = 0 müstəvisinə qədər məsafəni tapın.<br><br>
+        <strong>Həll:</strong><br>
+        d = |2·1 - 1·2 + 2·3 - 3| / √(4 + 1 + 4)<br>
+        = |2 - 2 + 6 - 3| / 3<br>
+        = 3/3 = 1
+    </div>
+    
+    <h2>5.7. İki Müstəvinin Qarşılıqlı Vəziyyəti</h2>
+    
+    <p>İki müstəvi:</p>
+    <div class="formula">
+        A₁x + B₁y + C₁z + D₁ = 0<br>
+        A₂x + B₂y + C₂z + D₂ = 0
+    </div>
+    
+    <h3>Vəziyyətlər:</h3>
+    <ul>
+        <li><strong>Paralel:</strong> A₁/A₂ = B₁/B₂ = C₁/C₂ ≠ D₁/D₂</li>
+        <li><strong>Üst-üstə düşür:</strong> A₁/A₂ = B₁/B₂ = C₁/C₂ = D₁/D₂</li>
+        <li><strong>Kəsişir:</strong> A₁/A₂ ≠ B₁/B₂ və ya B₁/B₂ ≠ C₁/C₂</li>
+        <li><strong>Perpendikulyar:</strong> A₁A₂ + B₁B₂ + C₁C₂ = 0</li>
+    </ul>
+    
+    <h2>5.8. Düz Xətt və Müstəvinin Kəsişməsi</h2>
+    
+    <p>Düz xətt (x-x₀)/l = (y-y₀)/m = (z-z₀)/n və müstəvi Ax + By + Cz + D = 0 kəsişmə nöqtəsini tapmaq üçün:</p>
+    
+    <ol>
+        <li>Düz xəttin parametrik tənliyini yazırıq</li>
+        <li>Müstəvi tənliyinə əvəz edirik</li>
+        <li>t parametrini tapırıq</li>
+        <li>Kəsişmə nöqtəsinin koordinatlarını hesablayırıq</li>
+    </ol>
+    
+    <div class="example">
+        <strong>Nümunə 5.4:</strong> (x-1)/2 = (y+1)/1 = (z-2)/3 düz xətti ilə x + y + z - 6 = 0 müstəvisinin kəsişmə nöqtəsini tapın.<br><br>
+        <strong>Həll:</strong><br>
+        Parametrik forma: x = 1 + 2t, y = -1 + t, z = 2 + 3t<br>
+        Müstəviyə əvəz edək:<br>
+        (1 + 2t) + (-1 + t) + (2 + 3t) - 6 = 0<br>
+        2 + 6t - 6 = 0<br>
+        6t = 4<br>
+        t = 2/3<br><br>
+        x = 1 + 2·(2/3) = 7/3<br>
+        y = -1 + 2/3 = -1/3<br>
+        z = 2 + 3·(2/3) = 4<br><br>
+        Kəsişmə nöqtəsi: (7/3, -1/3, 4)
+    </div>
+    
+    <h2>5.9. İki Düz Xəttin Qarşılıqlı Vəziyyəti</h2>
+    
+    <p>Fəzada iki düz xətt:</p>
+    <ul>
+        <li><strong>Kəsişir:</strong> Bir nöqtədə kəsişirlər</li>
+        <li><strong>Paralel:</strong> İstiqamət vektorları kollineardır</li>
+        <li><strong>Çarpaz:</strong> Bir müstəvidə yerləşmir, kəsişmir</li>
+    </ul>
+    
+    <h2>5.10. Sfera Tənliyi</h2>
+    
+    <p>Mərkəzi C(a, b, c) və radiusu r olan sferanın tənliyi:</p>
+    
+    <div class="formula">
+        (x - a)² + (y - b)² + (z - c)² = r²
+    </div>
+    
+    <h3>Ümumi forma:</h3>
+    <div class="formula">
+        x² + y² + z² + Dx + Ey + Fz + G = 0
+    </div>
+</div>
+
+<div class="page">
+    <h2>5.11. Silindrik və Sferik Koordinatlar</h2>
+    
+    <h3>Silindrik Koordinatlar:</h3>
+    <div class="formula">
+        x = ρ cos φ<br>
+        y = ρ sin φ<br>
+        z = z
+    </div>
+    
+    <h3>Sferik Koordinatlar:</h3>
+    <div class="formula">
+        x = r sin θ cos φ<br>
+        y = r sin θ sin φ<br>
+        z = r cos θ
+    </div>
+    
+    <h2>5.12. Fəza Həndəsəsinin Tətbiqləri</h2>
+    
+    <h3>1. Kompüter Qrafikası:</h3>
+    <ul>
+        <li>3D modelləşdirmə</li>
+        <li>Kamera proyeksiyaları</li>
+        <li>İşıqlandırma hesablamaları</li>
+    </ul>
+    
+    <h3>2. Robotika:</h3>
+    <ul>
+        <li>Robot əlinin hərəkəti</li>
+        <li>Yol planlaşdırması</li>
+        <li>Toqquşma aşkarlanması</li>
+    </ul>
+    
+    <h3>3. Aviasiya və Kosmonautika:</h3>
+    <ul>
+        <li>Uçuş trayektoriyaları</li>
+        <li>Naviqasiya sistemləri</li>
+        <li>Peyk orbitləri</li>
+    </ul>
+    
+    <h3>4. Arxitektura:</h3>
+    <ul>
+        <li>Binaların 3D layihələndirilməsi</li>
+        <li>Konstruksiya hesablamaları</li>
+    </ul>
+    
+    <div class="example">
+        <strong>Praktik Tətbiq - GPS Naviqasiyası:</strong><br><br>
+        GPS sistemi fəza həndəsəsindən istifadə edir. Hər peyk sferanın mərkəzidir və siqnal məsafəsi radiusdur. Ən azı 3 peykin kəsişməsi ilə dəqiq mövqe təyin olunur.<br><br>
+        Üç sfera tənliyi:<br>
+        (x - x₁)² + (y - y₁)² + (z - z₁)² = r₁²<br>
+        (x - x₂)² + (y - y₂)² + (z - z₂)² = r₂²<br>
+        (x - x₃)² + (y - y₃)² + (z - z₃)² = r₃²<br><br>
+        Bu sistemin həlli qəbuledicinin (x, y, z) koordinatlarını verir.
+    </div>
+    
+    <h2>5.13. Nəticə və Ümumi Xülasə</h2>
+    
+    <p>Fəza həndəsəsi üçölçülü fəzada həndəsi obyektlərin öyrənilməsidir. Bu nəzəriyyə mühəndislik, fizika, kompüter qrafikası və bir çox digər sahələrdə əsas vasitədir.</p>
+    
+    <p><strong>Bu dərslikdə öyrəndiklərimiz:</strong></p>
+    
+    <ol>
+        <li><strong>Kompleks Ədədlər:</strong> Həqiqi ədədlərin genişlənməsi, həndəsi təsvir, əməllər və tətbiqlər</li>
+        <li><strong>Diferensial Tənliklər:</strong> Bir tərtibli xətti tənliklər, Bernoulli tənliyi, həll metodları</li>
+        <li><strong>Matris və Determinantlar:</strong> Xassələr, tərs matris, ranq, xətti tənliklər sistemi</li>
+        <li><strong>İki Tərtibli Əyrilər:</strong> Çevrə, ellips, hiperbola, parabola və onların xassələri</li>
+        <li><strong>Fəza Həndəsəsi:</strong> Müstəvi, düz xətt, məsafələr və bucaqlar</li>
+    </ol>
+    
+    <p>Bu mövzular ali riyaziyyatın əsasını təşkil edir və sonrakı daha mürəkkəb mövzuları anlamaq üçün zəruridir. Uğurlar!</p>
+</div>
+
+</body>
+</html>
+
+
+</html>
